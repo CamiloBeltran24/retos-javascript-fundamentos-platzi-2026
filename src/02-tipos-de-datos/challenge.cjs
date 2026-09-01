@@ -18,7 +18,23 @@
 //   { texto, numero, booleano, nulo, indefinido, simbolo, grande }
 // donde cada valor es el resultado de typeof sobre la variable.
 function identificarPrimitivos() {
-  // Tu código aquí
+  const texto = "hola";
+  const numero = 42;
+  const booleano = true;
+  const nulo = null;
+  const indefinido = undefined
+  const simbolo = Symbol("id")
+  const grande = 123n
+
+  return {
+    typeof texto,
+    typeof numero,
+    typeof booleano,
+    typeof nulo,
+    typeof indefinido,
+    typeof simbolo,
+    typeof grande,
+  }
 }
 
 // --- Reto 2: Diferenciar string y number ---
@@ -26,7 +42,21 @@ function identificarPrimitivos() {
 // Retorna un objeto con:
 //   { tipo: typeof valor, esString: true/false, esNumber: true/false }
 function diferenciarStringNumber(valor) {
-  // Tu código aquí
+
+  let esNumero = false;
+  let esString = false;
+
+  if(typeof valor === "number") {
+    esNumero = true;
+  } else {
+    esString = true;
+  }
+
+  return {
+    tipo: typeof valor,
+    esString: esString,
+    esNumero: esNumero,
+  }
 }
 
 // --- Reto 3: El caso especial de null ---
@@ -36,7 +66,19 @@ function diferenciarStringNumber(valor) {
 // Pista: typeof null devuelve "object", pero debes verificar
 // si realmente es null usando una comparación estricta (===).
 function explorarNull() {
-  // Tu código aquí
+  const nulo  = null;
+  let esNulo = false;
+
+  if(typeof nulo === null){
+    esNulo = true;
+  }
+
+  return {
+    valor: nulo,
+    tipo: typeof nulo,
+    esNull: esNulo,
+  }
+
 }
 
 // --- Reto 4: Undefined vs Null ---
@@ -45,7 +87,7 @@ function explorarNull() {
 // Retorna un objeto con:
 //   { sinAsignar, vacio, tipoSinAsignar: typeof sinAsignar, tipoVacio: typeof vacio, sonIguales: sinAsignar == vacio, sonEstrictamenteIguales: sinAsignar === vacio }
 function compararNullUndefined() {
-  // Tu código aquí
+  
 }
 
 // --- Reto 5: Symbol y BigInt ---

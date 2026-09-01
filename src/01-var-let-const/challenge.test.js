@@ -7,7 +7,7 @@ const {
   calcularTotal,
   identificarTipos,
   demostrarHoisting,
-} = require("./challenge.js");
+} = require("./challenge.cjs");
 
 describe("Reto 01 - Var, Let y Const", () => {
   describe("Reto 1: obtenerPI", () => {

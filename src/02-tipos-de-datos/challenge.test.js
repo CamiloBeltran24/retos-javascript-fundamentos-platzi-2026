@@ -9,7 +9,7 @@ const {
   trabajarConArreglos,
   funcionComoValor,
   clasificarTipo,
-} = require("./challenge.js");
+} = require("./challenge.cjs");
 
 describe("Reto 02 - Tipos de datos: primitivos vs complejos", () => {
   describe("Reto 1: identificarPrimitivos", () => {

@@ -9,7 +9,8 @@
 // Declara una constante llamada PI con el valor 3.14159
 // y retórnala.
 function obtenerPI() {
-  // Tu código aquí
+  const PI = 3.14159;
+  return PI;
 }
 
 // --- Reto 2: Reasignación con let ---
@@ -17,14 +18,17 @@ function obtenerPI() {
 // Luego reasígnala a 5.
 // Retorna el valor final de contador.
 function obtenerContador() {
-  // Tu código aquí
+  let contador = 0;
+  contador = 5;
+  return contador;
 }
 
 // --- Reto 3: Constante de texto ---
 // Declara una constante llamada NOMBRE_CURSO con el valor
 // "Fundamentos de JavaScript" y retórnala.
 function obtenerNombreCurso() {
-  // Tu código aquí
+  const NOMBRE_COMPLETO = "Fundamentos de JavaScript";
+  return NOMBRE_COMPLETO;
 }
 
 // --- Reto 4: Reasignación de strings ---
@@ -34,7 +38,13 @@ function obtenerNombreCurso() {
 //   { inicial: "hola", final: "adiós" }
 // Pista: guarda el valor inicial antes de reasignar.
 function reasignarMensaje() {
-  // Tu código aquí
+  let mensaje = "hola";
+  let mensaje_inicial = mensaje;
+  mensaje = "adiós";
+  return {
+    inicial: mensaje_inicial,
+    final: mensaje,
+  };
 }
 
 // --- Reto 5: Cálculo con const y let ---
@@ -44,7 +54,16 @@ function reasignarMensaje() {
 // Calcula el total como: precioBase - descuento.
 // Retorna un objeto: { precioBase, descuento, total }
 function calcularTotal() {
-  // Tu código aquí
+  const precioBase = 100;
+  let descuento = 10;
+  descuento = 25;
+  let total = precioBase - descuento;
+
+  return {
+    precioBase,
+    descuento,
+    total,
+  };
 }
 
 // --- Reto 6: Identificar tipos de dato ---
@@ -56,9 +75,9 @@ function identificarTipos() {
   const activo = true;
 
   return {
-    tipoEdad: undefined, // Reemplaza undefined por typeof de edad
-    tipoNombre: undefined, // Reemplaza undefined por typeof de nombre
-    tipoActivo: undefined, // Reemplaza undefined por typeof de activo
+    tipoEdad: typeof edad, // Reemplaza undefined por typeof de edad
+    tipoNombre: typeof nombre, // Reemplaza undefined por typeof de nombre
+    tipoActivo: typeof activo, // Reemplaza undefined por typeof de activo
   };
 }
 
@@ -71,9 +90,17 @@ function identificarTipos() {
 function demostrarHoisting() {
   // Tu código aquí
   // Paso 1: guarda el valor de "nombre" en una variable "antes"
+  let antes = nombre;
   // Paso 2: declara var nombre = "Oscar"
+  var nombre = "Oscar";
   // Paso 3: guarda el valor de "nombre" en una variable "despues"
+  let despues = nombre;
   // Paso 4: retorna { antes, despues }
+
+  return {
+    antes,
+    despues,
+  };
 }
 
 module.exports = {
